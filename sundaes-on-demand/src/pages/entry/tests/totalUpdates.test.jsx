@@ -57,8 +57,8 @@ test('Update topping subtotal when toppings change', async () => {
   expect(toppingsSubtotal).toHaveTextContent('1.50');
 });
 
-describe.only('grand total', () => {
-  test.only('grand total starts at $0.00', () => {
+describe('grand total', () => {
+  test('grand total starts at $0.00', () => {
     const { unmount } = render(<OrderEntry />);
 
     const grandtotal = screen.getByRole('heading', {
